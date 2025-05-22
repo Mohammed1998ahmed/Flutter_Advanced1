@@ -1,9 +1,11 @@
+import 'package:advancedflutter/core/helper/extension.dart';
+import 'package:advancedflutter/core/router/routes.dart';
 import 'package:advancedflutter/core/widght/space.dart';
 import 'package:advancedflutter/feature/onbording/ui/widght/top_AppBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'widght/bottomClick.dart';
+import '../../../core/widght/bottom_Click.dart';
 import 'widght/stack_image_Text.dart';
 
 class OnBording extends StatelessWidget {
@@ -25,7 +27,12 @@ class OnBording extends StatelessWidget {
               SpaceWidght(
                 height: 32.h,
               ),
-              BottomClick(),
+              BottomClick(
+                nameBottom: "Get Started",
+                onPressed: () {
+                  context.pushNamed(Routes.login_page);
+                },
+              ),
             ],
           ),
         ),

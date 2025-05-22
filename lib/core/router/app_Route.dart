@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../feature/onbording/ui/on_bording.dart';
+import '../../feature/register/ui/register.dart';
 
 class App_Route {
   Route generatorRoute(RouteSettings settings) {
@@ -12,6 +13,8 @@ class App_Route {
         return MaterialPageRoute(builder: (_) => OnBording());
       case Routes.login_page:
         return MaterialPageRoute(builder: (_) => Login());
+      case Routes.register_page:
+        return MaterialPageRoute(builder: (_) => Register());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

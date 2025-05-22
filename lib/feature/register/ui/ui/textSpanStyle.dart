@@ -62,9 +62,9 @@ class TextSpanStyle extends StatelessWidget {
               child: GestureDetector(
                 onTap: () {
                   print("Sign UP");
-                  context.pushNamed(Routes.register_page);
+                  context.pushNamed(Routes.login_page);
                 },
-                child: Text(" Sign Up ",
+                child: Text(" Sign In ",
                     style: TextStyle(
                         color: ColorsApp.main_Color_Blue,
                         fontWeight: FontWeight.w400,

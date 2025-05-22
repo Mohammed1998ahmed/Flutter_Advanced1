@@ -1,10 +1,12 @@
-import 'package:advancedflutter/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class BottomClick extends StatelessWidget {
-  const BottomClick({super.key});
+import '../theme/colors.dart';
 
+class BottomClick extends StatelessWidget {
+  const BottomClick({super.key, this.onPressed, required this.nameBottom});
+  final void Function()? onPressed;
+  final String nameBottom;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -12,7 +14,7 @@ class BottomClick extends StatelessWidget {
       height: 52.h, // ارتفاع الزر
 
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16), // تعديل الحواف
@@ -20,7 +22,7 @@ class BottomClick extends StatelessWidget {
           backgroundColor: ColorsApp.main_Color_Blue, // لون الخلفية
         ),
         child: Text(
-          "Get Started",
+          nameBottom,
           style: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: 16,

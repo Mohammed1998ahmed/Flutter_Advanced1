@@ -1,4 +1,5 @@
 import 'package:advancedflutter/core/router/routes.dart';
+import 'package:advancedflutter/feature/login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,7 +10,8 @@ class App_Route {
     switch (settings.name) {
       case Routes.on_Obrding_page:
         return MaterialPageRoute(builder: (_) => OnBording());
-
+      case Routes.login_page:
+        return MaterialPageRoute(builder: (_) => Login());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

@@ -43,6 +43,7 @@ dependencies:
   shared_preferences: ^2.2.3
   flutter_screenutil: ^5.9.3
   intl_phone_field: ^3.2.0
+  persistent_bottom_nav_bar: ^6.2.1
 
 dev_dependencies:
   flutter_test:

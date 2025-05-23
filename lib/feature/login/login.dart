@@ -1,3 +1,5 @@
+import 'package:advancedflutter/core/helper/extension.dart';
+import 'package:advancedflutter/core/router/routes.dart';
 import 'package:advancedflutter/core/widght/bottom_Click.dart';
 import 'package:advancedflutter/core/widght/space.dart';
 import 'package:advancedflutter/feature/login/ui/chickBox.dart';
@@ -37,6 +39,7 @@ class Login extends StatelessWidget {
                 nameBottom: "Login",
                 onPressed: () {
                   print("Login");
+                  context.pushNamed(Routes.home_page);
                 },
               ),
               SpaceWidght(

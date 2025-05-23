@@ -9,9 +9,9 @@ class TypeSignIn extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        CircularSignIn(assetName: "assets/images/google.png"),
-        CircularSignIn(assetName: "assets/images/facebook.png"),
-        CircularSignIn(assetName: "assets/images/apple.png"),
+        CircularWidght(assetName: "assets/images/google.png"),
+        CircularWidght(assetName: "assets/images/facebook.png"),
+        CircularWidght(assetName: "assets/images/apple.png"),
       ],
     );
   }

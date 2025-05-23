@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../feature/login/logic/cubit/login_cubit.dart';
 import '../../feature/onbording/ui/on_bording.dart';
+import '../../feature/register/logic/cubit/register_cubit.dart';
 import '../../feature/register/ui/register.dart';
 
 class App_Route {
@@ -21,7 +22,11 @@ class App_Route {
                   child: Login(),
                 ));
       case Routes.register_page:
-        return MaterialPageRoute(builder: (_) => Register());
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => RegisterCubit(),
+                  child: Register(),
+                ));
       case Routes.home_page:
         return MaterialPageRoute(builder: (_) => NavBar_Button());
       default:

@@ -1,4 +1,5 @@
 import 'package:advancedflutter/core/helper/extension.dart';
+import 'package:advancedflutter/core/helper/shared_phreferance.dart';
 import 'package:advancedflutter/core/networking/constansts.dart';
 import 'package:advancedflutter/core/networking/dio_Service.dart';
 import 'package:advancedflutter/core/router/routes.dart';
@@ -35,6 +36,8 @@ class LoginCubit extends Cubit<LoginState> {
       print(login_model!.message.toString());
       if (login_model!.status == true) {
         context.pushNamed(Routes.home_page);
+        SharedPreferencesService()
+            .setString(key: "token", value: login_model!.data!.token!);
       }
       emit(LoginSueccs());
     }).catchError((onError) {

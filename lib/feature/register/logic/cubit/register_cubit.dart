@@ -1,4 +1,5 @@
 import 'package:advancedflutter/core/helper/extension.dart';
+import 'package:advancedflutter/core/helper/shared_phreferance.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -48,6 +49,8 @@ class RegisterCubit extends Cubit<RegisterState> {
       print(reisterModel!.message.toString());
       if (reisterModel!.status == true) {
         context.pushNamed(Routes.home_page);
+        SharedPreferencesService()
+            .setString(key: "token", value: reisterModel!.data!.token!);
       }
       emit(RegisterSecces());
     }).catchError((onError) {

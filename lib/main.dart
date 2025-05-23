@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:advancedflutter/core/helper/bolc_services.dart';
+import 'package:advancedflutter/core/helper/shared_phreferance.dart';
 import 'package:advancedflutter/core/networking/dio_Service.dart';
 import 'package:advancedflutter/core/router/app_Route.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ void main() async {
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   DioService();
   Bloc.observer = MyBlocObserver();
-
+  SharedPreferencesService().init();
   await Future.delayed(Duration(seconds: 2));
   FlutterNativeSplash.remove();
   HttpOverrides.global = MyHttpOverrides();

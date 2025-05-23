@@ -1,4 +1,6 @@
 import 'package:advancedflutter/core/router/routes.dart';
+import 'package:advancedflutter/feature/home/home.dart';
+import 'package:advancedflutter/feature/home/ui/navBarButton.dart';
 import 'package:advancedflutter/feature/login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,6 +17,8 @@ class App_Route {
         return MaterialPageRoute(builder: (_) => Login());
       case Routes.register_page:
         return MaterialPageRoute(builder: (_) => Register());
+      case Routes.home_page:
+        return MaterialPageRoute(builder: (_) => NavBar_Button());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

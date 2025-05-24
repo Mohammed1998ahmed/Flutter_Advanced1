@@ -1,0 +1,19 @@
+ 
+default_platform(:android)
+
+platform :android do
+  desc "Runs all the tests"
+  lane :app_destirbution do
+   sh "flutter clean "
+   sh "flutter build apk --release"
+release = firebase_app_distribution(
+            app: "1:711528129695:android:23bbc55dd592de38776eaa",
+            # testers: "tester1@company.com, tester2@company.com",
+            firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
+            android_artifact_type:"APK",
+            android_artifact_path: "../build/app/outputs/apk/release/app-release.apk",
+            testers:"mohammedsh99999ahmed@gmail.com",
+            release_notes: "Lots of amazing new features to test out!"
+        )
+    end
+end

@@ -7,7 +7,7 @@ platform :android do
    sh "flutter clean "
    sh "flutter build apk --release"
 release = firebase_app_distribution(
-            app: "1:711528129695:android:23bbc55dd592de38776eaa",
+            app: "1:816281024681:android:5f20356a558cf6b460d1b8",# ******* edit ********
             # testers: "tester1@company.com, tester2@company.com",
             firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
             android_artifact_type:"APK",

@@ -52,6 +52,12 @@ class Login extends StatelessWidget {
                           email: cubit.controllerEmail.text,
                           passWord: cubit.controllerPassWord.text,
                           context: context);
+                      // cubit.verifyPhoneNumber1(phoneNumber: "+963997024104");
+                      // cubit.signInWithPhone("+963997024104");
+                      // cubit.createUserWithEmailAndPassword(
+                      //     emailAddress: cubit.controllerEmail.text,
+                      //     password: cubit.controllerPassWord.text);
+                      // print("Login ***********************");
                     },
                   ),
                   SpaceWidght(
@@ -61,7 +67,9 @@ class Login extends StatelessWidget {
                   SpaceWidght(
                     height: 32.h,
                   ),
-                  TypeSignIn(),
+                  TypeSignIn(
+                    cubit: cubit,
+                  ),
                   SpaceWidght(
                     height: 32.h,
                   ),
